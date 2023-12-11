@@ -1,0 +1,19 @@
+#testimony {
+  background: var(--light-gray);
+  position: relative;
+  padding-block: 5.8rem 2.5rem;
+  width: 100%;
+
+  .piment {
+    position: absolute;
+    top: -45rem;
+    left: 10rem;
+  }
+
+  h2 {
+    margin-top: 1.4rem;
+    color: var(--darker);
+    font-family: "avenirheavy", sans-serif;
+    font-weight: 800;
+  }
+}
