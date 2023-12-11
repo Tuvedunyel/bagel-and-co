@@ -1,0 +1,118 @@
+#essentials {
+  margin-bottom: 13.6rem;
+  width: 100%;
+  overflow: hidden;
+  h2 {
+    margin-top: 1.4rem;
+    color: var(--darker);
+    font-family: "avenirheavy", sans-serif;
+    font-weight: 800;
+  }
+
+  .card-container {
+    margin-top: 3.3rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(
+      5,
+      calc(138px + (273 - 138) * ((100vw - 360px) / (1920 - 360)))
+    );
+    place-items: center;
+    gap: 3.6rem;
+    list-style: none;
+    overflow: hidden;
+    max-width: min(95%, 1500px);
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .card {
+    background: var(--light-gray);
+    border-radius: 10px;
+    width: calc(138px + (273 - 138) * ((100vw - 360px) / (1920 - 360)));
+    min-height: calc(238px + (304 - 238) * ((100vw - 360px) / (1920 - 360)));
+    padding: calc(16px + (32 - 16) * ((100vw - 360px) / (1920 - 360)));
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: relative;
+
+    @media (max-width: 1700px) {
+      gap: 0.5rem;
+    }
+
+    &:hover {
+      div {
+        background: var(--darker);
+        padding-block: 3.2rem;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        border-radius: 10px;
+        color: white;
+        gap: 3.2rem;
+        transform: translateY(0);
+
+        .btn {
+          width: fit-content;
+          border: none;
+          opacity: 1;
+        }
+
+        svg:not(.stroke) path {
+          fill: white;
+        }
+
+        svg.stroke path {
+          stroke: white;
+        }
+
+        h4 {
+          color: white;
+        }
+      }
+    }
+
+    img {
+      height: 132px;
+      height: calc(94.3px + (132 - 94.3) * ((100vw - 360px) / (1920 - 360)));
+    }
+
+    div {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      padding-inline: 3.2rem;
+      transform: translateY(110%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: transform 0.3s ease-in-out;
+
+      svg {
+        width: calc(17px + (24 - 17) * ((100vw - 360px) / (1920 - 360)));
+        height: calc(17px + (24 - 17) * ((100vw - 360px) / (1920 - 360)));
+      }
+
+      @media (max-width: 1741px) {
+        transform: translateY(17rem);
+      }
+    }
+
+    .btn {
+      opacity: 0;
+    }
+
+    p {
+      line-height: 1.3;
+      font-family: "avenirbook";
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2.1rem;
+    }
+  }
+}

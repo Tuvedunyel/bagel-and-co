@@ -1,0 +1,56 @@
+header {
+  padding-block: 0.8rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.3rem;
+
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  nav {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    justify-items: center;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 1.6rem;
+    }
+  }
+
+  .burger {
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: flex;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--darker);
+  }
+
+  .btn {
+    width: fit-content;
+    justify-self: end;
+    font-size: calc(10px + (16 - 10) * ((100vw - 360px) / (1920 - 360)));
+  }
+}
